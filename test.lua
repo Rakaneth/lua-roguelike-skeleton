@@ -1,9 +1,12 @@
-local Entity = require 'entity'
-local utils = require 'utils'
-local terminal = require 'BearLibTerminal'
-local templates = require 'templates'
-local ROT = require 'lib.rotLove.src.rot'
+require("test_mixins")
 
-local player = Entity(templates.player)
+local Entity = require("entity")
+local templates = require("templates")
 
-print(player.name)
+local good_guy = Entity(templates.player)
+local bad_guy = Entity(templates.monster)
+
+print(good_guy)
+print(good_guy:print_stats())
+print(bad_guy)
+

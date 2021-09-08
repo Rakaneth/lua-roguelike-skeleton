@@ -21,6 +21,10 @@ function utils.none(tbl, fn)
     return true
 end
 
+function utils.contains(tbl, item)
+    return utils.any(tbl, function(i) return item == i end)
+end
+
 function utils.filter(tbl, fn)
     local result = {}
     for _, item in ipairs(tbl) do
