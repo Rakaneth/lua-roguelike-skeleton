@@ -38,7 +38,7 @@ function Entity:add(mixin, template)
                 self[k] = f
             end
         end
-        if mixin.iface.on_create then mixin.iface.on_create(self, template) end     
+        if mixin.iface.on_create then mixin.iface.on_create(self, tmp) end     
     end
     
 end
